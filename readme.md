@@ -26,6 +26,7 @@ You can also suggest packages so that we can directly dive into code with this c
 ## INSTRUCTIONS
 1. Run ```composer update``` to pull package dependencies.
 2. Add these to ```config\app.php```
+
     Providers
     ```
         'Zizaco\Entrust\EntrustServiceProvider',
@@ -39,6 +40,7 @@ You can also suggest packages so that we can directly dive into code with this c
         'Flash'     => 'Laracasts\Flash\Flash',
         'JavaScript'=> 'Laracasts\Utilities\JavaScript\JavaScriptFacade'
     ```
+    
 3. Run ```php artisan vendor:publish && php artisan entrust:migration``` to pull package migrations.
 4. Run ```php artisan migrate:install && php artisan migrate```
 5. Run ```bower install``` to pull javascript libraries.
