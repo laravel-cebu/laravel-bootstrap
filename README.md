@@ -1,4 +1,5 @@
-#Laravel Base App + Angular
+#Laravel(5.1) Base App + Angular
+
 
 Please fork and contribute to enhance the structure. 
 
