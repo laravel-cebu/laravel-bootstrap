@@ -1,27 +1,53 @@
-## Laravel PHP Framework
+#Laravel Base App + Angular
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Please fork and contribute to enhance the structure. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+You can also suggest packages so that we can directly dive into code with this code base.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+### Used Packages
+- Laracast Flash
+- HTML by Illuminate - for managing forms
+- Repositories - yes, you don't need to write these.
+- Api Guard - need an API on the fly? Cheers to these.
+- Javascript to Php - by Laracasts
+- Guzzle - we can't sent emails without this package.
 
-## Official Documentation
+### Bower Dependencies
+- jQuery
+- Bootstrap 3.*
+- Font Awesome
+- Angular
+- Angular Bootstrap
+- Angular Resource
+- Angular Filter
+- Moment
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
+## INSTRUCTIONS
+1. Run ```composer update``` to pull package dependencies.
+2. Add these to ```config\app.php```
+Providers
+```
+    'Zizaco\Entrust\EntrustServiceProvider',
+    'Laracasts\Flash\FlashServiceProvider',
+    'Laracasts\Utilities\JavaScript\JavascriptServiceProvider',
+    'Chrisbjr\ApiGuard\Providers\ApiGuardServiceProvider'
+```
+Aliases
+```
+    'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
+    'Flash'     => 'Laracasts\Flash\Flash',
+    'JavaScript'=> 'Laracasts\Utilities\JavaScript\JavaScriptFacade'
+```
+3. Run ```php artisan vendor:publish && php artisan entrust:migration``` to pull package migrations.
+4. Run ```php artisan migrate:install && php artisan migrate```
+5. Run ```bower install``` to pull javascript libraries.
+6. Use Laravel Elixir by running ```npm install```. Use ```sudo``` for super user.
+7. Run ```gulp``` or ```gulp watch```.
+8. Include ```public/css/all.css```, ```public/js/general.js``` and ```public/js/scripts.js``` on the templates you want to include the files.
+9. Finally run ```composer dump-autoload -o```, just to have a clean build.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
-### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
