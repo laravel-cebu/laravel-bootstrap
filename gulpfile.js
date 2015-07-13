@@ -31,9 +31,7 @@ elixir(function(mix) {
         "/bower_components/angular/angular.min.js",
         "/bower_components/angular-resource/angular-resource.min.js",
         "/bower_components/angular-bootstrap/ui-bootstrap.min.js",
-        "/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
         "/bower_components/moment/moment.js",
-        "/bower_components/momentjs/min/locales.min.js", 
         "/bower_components/angular-filter/dist/angular-filter.min.js",
         "main.js" // contains your general scripts
     ],'public/js/general.js');
@@ -45,7 +43,7 @@ elixir(function(mix) {
     mix.scripts([
 
     	/* Your Main Angular File */
-        // "/angular/main.js",
+        "/angular/main.js",
 
         /* Your Controllers */
         // "/angular/controllers/[Your Controller].js",

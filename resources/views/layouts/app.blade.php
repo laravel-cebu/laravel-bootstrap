@@ -46,7 +46,7 @@
 		</div>
 	</nav>
 
-	<div class="container">
+	<div class="container" ng-app="app">
 		@include('flash::message')
 
 		@yield('content')
