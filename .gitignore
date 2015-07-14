@@ -3,3 +3,7 @@
 .env
 /.idea
 /resources/assets/js/bower_components
+/public/js/scripts.js
+/public/js/scripts.js.map
+/public/js/general.js
+/public/js/general.js.map

@@ -22,6 +22,9 @@ elixir(function(mix) {
         "main.css" // contains your general styles
     ]);
 
+
+    mix.copy('../js/bower_components/font-awesome/fonts/**', 'public/fonts');
+
     /* 
      * General JS Libraries Needed for each page 
      */
